@@ -153,6 +153,21 @@ section { padding: 72px 0; border-top: 1px solid var(--line); }
 }
 .team-card h3 { font-size: 1rem; margin: 14px 0 2px; }
 .team-role { font-family: var(--font-mono); font-size: .78rem; color: var(--teal); text-transform: uppercase; letter-spacing: .06em; }
+
+/* ↓↓↓ NOVO BLOCO — cole aqui ↓↓↓ */
+.logo-img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+.avatar-img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
 @media (max-width: 700px) { .grid-team { grid-template-columns: 1fr 1fr; } }
 
 .faq-item { border-top: 1px solid var(--line); padding: 20px 0; }
