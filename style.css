@@ -156,8 +156,9 @@ section { padding: 72px 0; border-top: 1px solid var(--line); }
 
 /* ↓↓↓ NOVO BLOCO — cole aqui ↓↓↓ */
 .logo-img {
-  height: 34px;
-  width: auto;
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
   display: block;
 }
 
