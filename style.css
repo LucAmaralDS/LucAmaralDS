@@ -3,14 +3,14 @@
    Troque estas variáveis para adaptar a identidade visual.
    ============================================================ */
 :root {
-  /* Cor */
-  --ink:      #1C2331; /* texto principal / fundo escuro */
-  --paper:    #F2F0EB; /* fundo claro */
+  /* Cor — paleta DataLab, derivada do azul-marinho do logo (#19376B) */
+  --ink:      #19376B; /* azul-marinho do logo — texto principal, fundo escuro */
+  --paper:    #F4F6FA; /* branco levemente azulado */
   --white:    #FFFFFF;
-  --signal:   #B8912E; /* destaque quente (use com moderação) */
-  --teal:     #2F6F6B; /* destaque secundário / links */
-  --line:     #D8D4C9; /* bordas finas */
-  --muted:    #6B6F76; /* texto secundário */
+  --signal:   #00A6AC; /* ciano vibrante — destaque "dados/tech" (use com moderação) */
+  --teal:     #2E7D8C; /* azul-petróleo — destaque secundário / links */
+  --line:     #D6DEEA; /* bordas finas, tom frio */
+  --muted:    #5C6B85; /* texto secundário, azul acinzentado */
 
   /* Tipografia */
   --font-display: "Source Serif 4", Georgia, serif;
