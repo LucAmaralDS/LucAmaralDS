@@ -79,7 +79,7 @@ p { margin: 0 0 1em; color: var(--muted); }
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.15rem;
-  margin-left: -5px;
+  margin-left: -1px;
   margin-bottom: -6px;
 }
 .nav-links { list-style: none; display: flex; gap: 28px; margin: 0; padding: 0; align-items: center; }
