@@ -73,10 +73,15 @@ p { margin: 0 0 1em; color: var(--muted); }
 /* ── NAV ─────────────────────────────────────────────────── */
 .nav-wrap { position: sticky; top: 0; z-index: 50; background: rgba(242,240,235,.92); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; }
-.nav-logo { display: flex; align-items: flex-end; gap: 2px; text-decoration: none; color: var(--ink); }.logo-mark { width: 26px; height: 26px; background: var(--ink); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; }
+.nav-logo { display: flex; align-items: flex-end; gap: 0; text-decoration: none; color: var(--ink); }
 .logo-mark::after { content: ""; width: 8px; height: 8px; background: var(--signal); }
-.logo-text { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; }
-
+.logo-text {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-left: -6px;
+  margin-bottom: 2px;
+}
 .nav-links { list-style: none; display: flex; gap: 28px; margin: 0; padding: 0; align-items: center; }
 .nav-links a { color: var(--ink); text-decoration: none; font-size: .92rem; font-weight: 500; padding: 6px 0; border-bottom: 2px solid transparent; }
 .nav-links a:hover, .nav-links a.active { border-bottom-color: var(--signal); }
