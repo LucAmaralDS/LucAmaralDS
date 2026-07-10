@@ -73,7 +73,19 @@ p { margin: 0 0 1em; color: var(--muted); }
 /* ── NAV ─────────────────────────────────────────────────── */
 .nav-wrap { position: sticky; top: 0; z-index: 50; background: rgba(242,240,235,.92); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; }
-.nav-logo { display: flex; align-items: flex-end; gap: 0; text-decoration: none; color: var(--ink); }
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.logo-full {
+  height: 32px;      /* ajuste este valor até o tamanho ficar bom na navbar */
+  width: auto;        /* mantém a proporção original da imagem, sem distorcer */
+  object-fit: contain;
+  display: block;
+}
 .logo-mark::after { content: ""; width: 8px; height: 8px; background: var(--signal); }
 .logo-text {
   font-family: var(--font-display);
