@@ -81,7 +81,7 @@ p { margin: 0 0 1em; color: var(--muted); }
 }
 
 .logo-full {
-  height: 32px;      /* ajuste este valor até o tamanho ficar bom na navbar */
+  height: 40px;      /* ajuste este valor até o tamanho ficar bom na navbar */
   width: auto;        /* mantém a proporção original da imagem, sem distorcer */
   object-fit: contain;
   display: block;
