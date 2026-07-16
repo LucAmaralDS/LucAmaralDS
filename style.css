@@ -34,6 +34,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+img { max-width: 100%; height: auto; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -82,11 +84,19 @@ p { margin: 0 0 1em; color: var(--muted); }
 
 .logo-full {
   height: 48px;      /* ajuste este valor até o tamanho ficar bom na navbar */
-  width: auto;        /* mantém a proporção original da imagem, sem distorcer */
+  width: auto;       /* mantém a proporção original da imagem, sem distorcer */
   object-fit: contain;
   display: block;
 }
-.logo-mark::after { content: ""; width: 8px; height: 8px; background: var(--signal); }
+
+.logo-img {
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 1px;
+}
+
 .logo-text {
   font-family: var(--font-display);
   font-weight: 600;
@@ -94,6 +104,7 @@ p { margin: 0 0 1em; color: var(--muted); }
   margin-left: -1px;
   margin-bottom: -6px;
 }
+
 .nav-links { list-style: none; display: flex; gap: 28px; margin: 0; padding: 0; align-items: center; }
 .nav-links a { color: var(--ink); text-decoration: none; font-size: .92rem; font-weight: 500; padding: 6px 0; border-bottom: 2px solid transparent; }
 .nav-links a:hover, .nav-links a.active { border-bottom-color: var(--signal); }
@@ -118,6 +129,14 @@ p { margin: 0 0 1em; color: var(--muted); }
 .hero h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); max-width: 14ch; }
 .hero-lede { font-size: 1.15rem; max-width: 42ch; }
 .hero-actions { display: flex; gap: 14px; margin-top: 8px; flex-wrap: wrap; }
+
+.hero-photo img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
 
 /* Elemento-assinatura: "tira de razão" (ledger strip), estética de recibo/planilha */
 .ledger {
@@ -170,15 +189,6 @@ section { padding: 72px 0; border-top: 1px solid var(--line); }
 .team-card h3 { font-size: 1rem; margin: 14px 0 2px; }
 .team-role { font-family: var(--font-mono); font-size: .78rem; color: var(--teal); text-transform: uppercase; letter-spacing: .06em; }
 
-/* ↓↓↓ NOVO BLOCO — cole aqui ↓↓↓ */
-.logo-img {
-  height: 24px;
-  width: 24px;
-  object-fit: contain;
-  display: block;
-  margin-bottom: 1px;
-}
-
 .avatar-img {
   width: 100%;
   aspect-ratio: 1;
@@ -186,6 +196,7 @@ section { padding: 72px 0; border-top: 1px solid var(--line); }
   border-radius: var(--radius);
   display: block;
 }
+
 @media (max-width: 700px) { .grid-team { grid-template-columns: 1fr 1fr; } }
 
 .faq-item { border-top: 1px solid var(--line); padding: 20px 0; }
@@ -205,13 +216,30 @@ section { padding: 72px 0; border-top: 1px solid var(--line); }
 footer.site-footer { background: var(--ink); color: #8B8F98; padding: 24px 0; font-size: .82rem; }
 .footer-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 
-.inscricao-banner { background: var(--signal);
+.inscricao-banner { background: var(--signal); color: var(--ink); }
+.inscricao-inner { display: flex; align-items: center; gap: 14px; padding: 12px 24px; }
+.inscricao-icon svg { width: 20px; height: 20px; }
+.inscricao-text { flex: 1; font-size: .88rem; }
+.inscricao-close { background: none; border: none; font-size: 1.1rem; cursor: pointer; color: var(--ink); }
 
-img { max-width: 100%; height: auto; }
-.hero-photo img {
-  width: 50%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  border-radius: var(--radius);
-  display: block;
+.stat { font-family: var(--font-mono); }
+.stat-num { font-size: 2.2rem; font-weight: 700; color: var(--ink); }
+.stat-label { font-size: .82rem; color: var(--muted); }
+
+/* ── Página de projetos ──────────────────────────────────── */
+.projetos-header { padding: 64px 0 32px; }
+.semester-block { border: 1px solid var(--line); margin-bottom: 16px; border-radius: var(--radius); overflow: hidden; }
+.semester-toggle {
+  width: 100%; text-align: left; background: var(--white); border: none; cursor: pointer;
+  padding: 20px 24px; display: flex; justify-content: space-between; align-items: center;
+  font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--ink);
 }
+.semester-chevron { width: 18px; height: 18px; transition: transform .2s ease; }
+.semester-toggle[aria-expanded="true"] .semester-chevron { transform: rotate(180deg); }
+.semester-body { max-height: 0; overflow: hidden; transition: max-height .3s ease; padding: 0 24px; }
+.semester-block:not(.collapsed) .semester-body { max-height: 2000px; padding: 0 24px 24px; }
+
+.project-entry { border-top: 1px dashed var(--line); padding: 16px 0; }
+.project-entry:first-child { border-top: none; }
+.project-entry h4 { margin: 0 0 4px; font-size: 1rem; }
+.project-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--teal); text-transform: uppercase; }
