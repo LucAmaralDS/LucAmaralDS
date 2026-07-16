@@ -206,3 +206,11 @@ footer.site-footer { background: var(--ink); color: #8B8F98; padding: 24px 0; fo
 .footer-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 
 .inscricao-banner { background: var(--signal);
+
+.hero-photo img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
