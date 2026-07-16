@@ -207,6 +207,7 @@ footer.site-footer { background: var(--ink); color: #8B8F98; padding: 24px 0; fo
 
 .inscricao-banner { background: var(--signal);
 
+img { max-width: 100%; height: auto; }
 .hero-photo img {
   width: 50%;
   aspect-ratio: 4/3;
