@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seminários – DataLab</title>
+  <meta name="description" content="Seminários quinzenais do DataLab: palestrantes, temas e datas dos encontros." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <header class="nav-wrap" id="top">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo" aria-label="DataLab – início">
+        <img src="imagens/datalab-icon.png" alt="DataLab" class="logo-full" />
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#servicos">Serviços</a></li>
+        <li><a href="index.html#processo">Como funciona</a></li>
+        <li><a href="index.html#equipe">Equipe</a></li>
+        <li><a href="seminarios.html" class="active">Seminários</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contato" class="nav-cta">Falar com a gente</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section class="seminars-header">
+      <div class="container">
+        <span class="eyebrow">Seminários</span>
+        <h1>Encontros quinzenais do DataLab</h1>
+        <p style="max-width:60ch;">A cada 15 dias, reunimos pesquisadores e convidados para apresentar temas de estatística e ciência de dados. Confira os próximos encontros e o que já foi discutido.</p>
+      </div>
+    </section>
+
+    <section style="border-top:none; padding-top:0;">
+      <div class="container">
+
+        <h2 class="seminars-group-title">Próximos seminários</h2>
+
+        <div class="seminar-card">
+          <img class="seminar-photo" src="imagens/palestrante-exemplo-1.jpg" alt="[Nome do(a) palestrante]" />
+          <div class="seminar-body">
+            <div class="seminar-meta">
+              <span class="seminar-badge">Em breve</span>
+              <span>[dd/mm/aaaa · 14h]</span>
+            </div>
+            <h3>[Título da palestra]</h3>
+            <p class="seminar-speaker">[Nome do(a) palestrante] — [instituição/cargo]</p>
+            <p class="seminar-desc">[Breve resumo do tema, 1-2 frases sobre o que será apresentado.]</p>
+          </div>
+        </div>
+
+        <h2 class="seminars-group-title">Seminários anteriores</h2>
+
+        <div class="seminar-card is-past">
+          <img class="seminar-photo" src="imagens/palestrante-exemplo-2.jpg" alt="[Nome do(a) palestrante]" />
+          <div class="seminar-body">
+            <div class="seminar-meta">
+              <span>[dd/mm/aaaa]</span>
+            </div>
+            <h3>[Título da palestra]</h3>
+            <p class="seminar-speaker">[Nome do(a) palestrante] — [instituição/cargo]</p>
+            <p class="seminar-desc">[Breve resumo do tema, 1-2 frases sobre o que foi apresentado.]</p>
+          </div>
+        </div>
+
+        <p style="margin-top:32px;font-size:.85rem;">Duplique um bloco <code>.seminar-card</code> para cada novo seminário. Mova o card para o grupo "Próximos" ou "Anteriores" conforme a data, e remova a tag <code>.seminar-badge</code> quando o seminário já tiver acontecido.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="ano"></span> DataLab — UFC</span>
+      <span>Fortaleza, Ceará · datalab@ufc.br</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
