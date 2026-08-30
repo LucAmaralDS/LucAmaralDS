@@ -133,13 +133,27 @@ p { margin: 0 0 1em; color: var(--muted); }
   background-size: 28px 28px;
 }
 .hero .container { position: relative; padding-bottom: 0; }
-.hero-content { max-width: 62ch; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 32px; align-items: center; }
+.hero-content { max-width: 56ch; }
 .hero h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); max-width: 15ch; }
 .hero-lede { font-size: 1.15rem; max-width: 48ch; }
 .hero-actions { display: flex; gap: 14px; margin-top: 8px; flex-wrap: wrap; }
 
+/* Ilustração decorativa do hero — abstrata, ecoa o motivo "rede + dados" do logo */
+.hero-graphic { width: 100%; height: auto; max-width: 360px; justify-self: center; }
+.hero-graphic-lines line { stroke: var(--line); }
+.hero-graphic-bars rect { fill: var(--ink); opacity: .08; }
+.hero-graphic-dots circle { fill: var(--signal); }
+.hero-graphic-dots circle:last-child { fill: var(--ink); }
+
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-graphic { display: none; }
+}
+
 /* Elemento-assinatura: faixa horizontal estilo "recibo/planilha" */
 .hero-stats {
+  grid-column: 1 / -1;
   margin-top: 56px;
   border-top: 1px solid var(--ink);
   border-bottom: 1px solid var(--ink);
